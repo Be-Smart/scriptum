@@ -1,0 +1,52 @@
+@font-face
+	font-family: 'Baron Neue'
+	src: url($font-url-baron) format('opentype')
+
+@font-face
+	font-family: 'Baron Neue Bold'
+	src: url($font-url-baron-b) format('opentype')
+
+@font-face
+	font-family: 'Arial MT'
+	src: url($font-family-arialmt) format('opentype')
+
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+body
+	background: $light-gray
+	color: $gray
+	font-family: $font-family-baron
+
+h1,h2,h3,a
+	color: $dark-blue
+
+h2
+	font-size: em(45px)
+	letter-spacing: .02em
+
+h3
+	font-size: em(14px)
+	letter-spacing: .12em
+
+p
+	font-family: $font-family-arialmt
+	font-size: em(15px)
+	line-height: 23px
+	letter-spacing: .14em
+
+a
+	font-size: em(13px)
+	text-decoration: none
+	letter-spacing: .12em
+
+img
+	max-width: 100%
+
+ul,
+li
+	margin: 0
+	padding: 0
+	list-style: none
