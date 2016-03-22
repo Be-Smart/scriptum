@@ -1,0 +1,48 @@
+.header__navbar__toggle
+	background: url(../img/menu-bg.png) -88px
+	display: block
+	width: 64px
+	height: 92px
+	float: right
+	cursor: pointer
+	margin-bottom: 5px
+	+breakpoint($md__brkpoint)
+		background: url(../img/menu-bg.png)
+		width: 84px
+		height: 118px
+	span
+		position: relative
+		display: block
+		margin-left: 31%
+		margin-top: 70%
+		&:after,
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: -9px
+
+		&:after
+			top: 9px
+
+	span,
+	span:after,
+	span:before
+		width: 28px
+		height: 2px
+		background-color: $black
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+.header__navbar__toggle.on
+	span
+		background-color: transparent
+
+.header__navbar__toggle.on
+	span:before
+		transform: rotate(45deg) translate(5px, 5px)
+
+.header__navbar__toggle.on
+	span:after
+		transform: rotate(-45deg) translate(7px, -8px)

@@ -1,0 +1,20 @@
+header
+	background: url(../img/bg.jpg) no-repeat center center
+	background-size: cover
+	padding: 20px
+	height: 430px
+	@extend %margin-bottom
+	+breakpoint(375px)
+		height: 480px
+	+breakpoint(767px)
+		height: 580px
+	+breakpoint(992px)
+		height: 724px
+	+breakpoint(1440px)
+		height: 1008px
+
+.site-logo
+	display: inline-block
+	width: 64px
+	+breakpoint($md__brkpoint)
+		width: 84px
