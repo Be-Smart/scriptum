@@ -1,0 +1,39 @@
+.about
+	@extend %bg
+	@extend %margin-bottom
+
+.about__container
+	padding-top: 35px
+	padding-bottom: 35px
+	+breakpoint($sm__brkpoint)
+		+container(992px)
+		padding-top: 132px
+		padding-bottom: 132px
+	+breakpoint(1300px)
+		+container(82.5945946%)
+	+breakpoint($lg__brkpoint)
+		+container(68.7567568%)
+
+.about__hdln
+	@extend %hdln__shadow
+	text-align: center
+	margin-bottom: 40px
+	+breakpoint($md__brkpoint)
+		+span(5 at 6 of 10)
+		text-align: left
+
+.about__col1
+	+breakpoint($sm__brkpoint)
+		+span(5 of 10)
+
+.about__col2
+	+breakpoint($sm__brkpoint)
+		+span(5 at 6 of 10)
+
+.about__text
+	margin-bottom: 45px
+
+.about__link
+	@extend %link__shadow
+	&:hover
+		color: $gray

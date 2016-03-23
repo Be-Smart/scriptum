@@ -8,3 +8,10 @@
 
 @function fluid($target, $context)
 	@return ($target / $context) * 100%
+
+//Call color from color palette
+@function color($key)
+	@if map-has-key($shadow-palette, $key)
+		@return map-get($shadow-palette, $key)
+	@warn "Unknown `#{$key}` in $shadow-palette."
+	@return null
