@@ -1,26 +1,18 @@
 .about
 	@extend %bg
 	@extend %margin-bottom
+	+clearfix
 
 .about__container
-	padding-top: 35px
-	padding-bottom: 35px
+	@extend %section-padding
+	+clearfix
 	+breakpoint($sm__brkpoint)
-		+container(992px)
-		padding-top: 132px
-		padding-bottom: 132px
+		max-width: 861px
+		margin: auto
 	+breakpoint(1300px)
-		+container(82.5945946%)
-	+breakpoint($lg__brkpoint)
-		+container(68.7567568%)
-
-.about__hdln
-	@extend %hdln__shadow
-	text-align: center
-	margin-bottom: 40px
-	+breakpoint($md__brkpoint)
-		+span(5 at 6 of 10)
-		text-align: left
+		max-width: 100%
+		+span(8 of 12)
+		margin: 0 span(2 of 12) + gutter(12)
 
 .about__col1
 	+breakpoint($sm__brkpoint)
@@ -35,5 +27,3 @@
 
 .about__link
 	@extend %link__shadow
-	&:hover
-		color: $gray
