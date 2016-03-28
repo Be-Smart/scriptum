@@ -1,0 +1,65 @@
+.webdev
+	background: $white
+	@extend %margin-bottom
+	position: relative
+	+clearfix
+
+.webdev__img__col
+	+breakpoint($sm__brkpoint)
+		+span(7 of 14)
+
+.webdev__icon__container
+	text-align: center
+	color: $dark-blue
+	padding-top: 20px
+	+clearfix
+	+breakpoint($sm__brkpoint)
+		+span(7 of 14 last)
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+
+.webdev__icon__col
+	+span(3.5 of 7)
+	&:last-child
+		+span(3.5 of 7 last)
+	+breakpoint(480px)
+		+span(2.33 of 7)
+		&:first-child
+			margin-left: span(1.165 wide of 7)
+		&:last-child
+			+span(2.33 of 7)
+	+breakpoint($sm__brkpoint)
+		+span(7 of 7)
+		&:first-child
+			margin-left: 0
+		&:last-child
+			+span(7 of 7)
+	+breakpoint($lg__brkpoint)
+		+span(2.33 of 7)
+		&:first-child
+			margin-left: span(1.165 wide of 7)
+		&:last-child
+			+span(2.33 of 7)
+
+.webdev__icon__wrap
+	+breakpoint($sm__brkpoint)
+		+span(2.3 of 7)
+		&:nth-child(6n+3)
+			+span(2.3 of 7 last)
+	+breakpoint($lg__brkpoint)
+		+span(100%)
+		&:nth-child(6n+3)
+			+span(100%)
+		margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+	p
+		font-family: $font-family-baron
+		font-size: em(12px)
+		@extend %link__shadow
+		+breakpoint($sm__brkpoint $md__brkpoint)
+			font-size: em(10px)
+		+breakpoint($lg__brkpoint)
+			font-size: em(14px)
