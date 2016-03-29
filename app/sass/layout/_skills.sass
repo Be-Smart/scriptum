@@ -1,0 +1,31 @@
+.skills
+	@extend %bg
+	@extend %margin-bottom
+	+clearfix
+
+.skills__container
+	@extend %section-padding
+	+span(10)
+	margin: 0 span(2 wide)
+
+.skills__progress-wrap
+	background: $black
+	width: 100%
+	height: 30px
+	margin-bottom: 50px
+	position: relative
+	overflow: hidden
+
+
+.skills__progress-bar
+	background: $light-gray
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	&::before
+		content: attr(data-progress-percent)
+		margin-left: -40px
+		color: $white
+		line-height: 30px
