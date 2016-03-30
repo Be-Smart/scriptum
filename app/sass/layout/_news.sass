@@ -1,0 +1,53 @@
+.news
+	@extend %bg
+	@extend %margin-bottom
+	+clearfix
+
+.news__container
+	@extend %section-padding
+	+span(12)
+	margin: 0 span(1 wide)
+	+breakpoint($sm__brkpoint)
+		+span(10)
+		margin: 0 span(2 wide)
+
+.news__col
+	max-width: 400px
+	margin: 0 auto 50px
+	+breakpoint($sm__brkpoint)
+		max-width: initial
+		+span(10 of 10)
+	+breakpoint($lg__brkpoint)
+		+span(3.333 of 10)
+		&:last-child
+			+span(3.333 of 10 last)
+
+.news__img-wrap
+	margin-bottom: 15px
+	+breakpoint($sm__brkpoint)
+		+span(4 of 10)
+	+breakpoint($lg__brkpoint)
+		+span(3.333 of 3.333)
+
+.news__text-wrap
+	+breakpoint($sm__brkpoint)
+		+span(5.5 of 10 last)
+	+breakpoint($lg__brkpoint)
+		+span(3.333 of 3.333)
+
+.news__author
+	@extend %news-author
+	&:before
+		background: url(../img/pencil.svg)
+
+.news__date
+	@extend %news-author
+	margin-left: 40px
+	&:before
+		background: url(../img/calendar.svg)
+
+.news__link
+	@extend %link__shadow
+	color: $link-gray
+	&:hover
+		color: $dark-blue
