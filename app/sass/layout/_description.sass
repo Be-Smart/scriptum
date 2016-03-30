@@ -1,0 +1,54 @@
+.description
+	@extend %margin-bottom
+	+clearfix
+
+.description__container
+	@extend %section-padding
+	+span(12)
+	margin: 0 span(1 wide)
+	+breakpoint($sm__brkpoint)
+		+span(10)
+		margin: 0 span(2 wide)
+
+.description__col
+	margin-bottom: 30px
+	&:nth-child(3n+2)
+		@extend %align-center
+	+breakpoint($lg__brkpoint)
+		+span(3.33 of 10)
+		&:last-child
+			+span(3.33 of 10 last)
+			text-align: right
+
+.description__item
+	margin-bottom: 40px
+	+clearfix
+
+.description__icon-wrap
+	+span(1 of 4)
+	+breakpoint($sm__brkpoint)
+		+span(1 of 10)
+	+breakpoint($lg__brkpoint)
+		+span(.833 of 3.33)
+
+.description__text-wrap
+	+span(3 of 4 last)
+	+breakpoint($sm__brkpoint)
+		+span(9 of 10 last)
+	+breakpoint($lg__brkpoint)
+		+span(2.497 of 3.33 last)
+
+.description__item-name
+	margin-top: 0
+
+.description__icon-wrap--right
+	@extend .description__icon-wrap
+	+breakpoint($lg__brkpoint)
+		+span(.833 of 3.33 last)
+
+
+.description__text-wrap--right
+	@extend .description__text-wrap
+	+breakpoint($lg__brkpoint)
+		+span(2.497 of 3.33)
+

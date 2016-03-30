@@ -5,8 +5,11 @@
 
 .skills__container
 	@extend %section-padding
-	+span(10)
-	margin: 0 span(2 wide)
+	+span(12)
+	margin: 0 span(1 wide)
+	+breakpoint($sm__brkpoint)
+		+span(10)
+		margin: 0 span(2 wide)
 
 .skills__progress-wrap
 	background: $black
