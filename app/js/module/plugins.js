@@ -17,3 +17,11 @@ $('.works__link').on( 'click', function(el) {
 	$(el.target).addClass('current');
 	return false;
 });
+
+//
+// Owl-carousel plugin
+//
+$('.owl-carousel').owlCarousel({
+	items: 1,
+	loop: true
+});

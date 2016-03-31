@@ -1,0 +1,59 @@
+.quote
+	@extend %bg
+	@extend %margin-bottom
+	+clearfix
+	+breakpoint($sm__brkpoint)
+		position: relative
+
+	.owl-dots
+		margin-top: 17px
+		+breakpoint($md__brkpoint)
+			padding-top: 35px
+
+	.owl-dot
+		width: 8px
+		height: 8px
+		background: $dot-gray
+		display: inline-block
+		margin: 0 25px 0 0
+		&:last-child
+			margin: 0
+
+	.owl-dot.active
+		background: $black
+
+.quote__img-wrap
+	+breakpoint($sm__brkpoint)
+		+span(7 last)
+
+.quote__col
+	background: url(../img/quote-bg.png) no-repeat center center
+	background-size: cover
+	height: 400px
+	position: relative
+	+breakpoint($sm__brkpoint)
+		+span(7)
+		height: 100%
+		position: absolute
+
+.quote__item-wrap
+	+span(4 of 7)
+	margin: 0 span(1.5 wide of 7)
+	@extend %align-center
+	color: $dark-blue
+	position: absolute
+	top: 50%
+	left: 0
+	transform: translateY(-50%)
+	padding-top: 47px
+	&:before
+		background: url(../img/quote.svg)
+		width: 30px
+		height: 22px
+		position: absolute
+		left: 50%
+		top: 0
+		transform: translateX(-50%)
+		content: ''
+	+breakpoint($md__brkpoint)
+		padding-top: 65px
