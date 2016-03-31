@@ -1,0 +1,27 @@
+.form__input
+	background: $form-gray
+	margin-bottom: 30px
+	+span(12 of 12)
+	border: 0
+	padding: 25px
+	letter-spacing: .14em
+	&::placeholder
+		color: $plcholder-gray
+	&:focus
+		outline: 0
+
+#name
+	+breakpoint($sm__brkpoint)
+		+span(4 of 8)
+
+#surname
+	+breakpoint($sm__brkpoint)
+		+span(4 of 8 last)
+
+#msg
+	height: 250px
+	+breakpoint($sm__brkpoint)
+		height: 360px
+
+.empty-error
+	color: $black

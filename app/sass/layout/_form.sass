@@ -1,0 +1,17 @@
+.form
+	@extend %bg
+	@extend %margin-bottom
+	+clearfix
+
+.form__container
+	@extend %section-padding
+	+span(12)
+	margin: 0 span(1 wide)
+	+breakpoint($sm__brkpoint)
+		+span(8)
+		margin: 0 span(3 wide)
+
+.form__succes
+	display: none
+	@extend .form__container
+	@extend %align-center

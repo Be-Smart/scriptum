@@ -1,3 +1,6 @@
+//
+// Menu button
+//
 .header__navbar__toggle
 	background: url(../img/menu-bg.png) -88px
 	display: block
@@ -21,7 +24,6 @@
 			position: absolute
 			left: 0
 			top: -9px
-
 		&:after
 			top: 9px
 
@@ -38,11 +40,19 @@
 .header__navbar__toggle.on
 	span
 		background-color: transparent
+		&:before
+			transform: rotate(45deg) translate(5px, 5px)
+		&:after
+			transform: rotate(-45deg) translate(7px, -8px)
 
-.header__navbar__toggle.on
-	span:before
-		transform: rotate(45deg) translate(5px, 5px)
-
-.header__navbar__toggle.on
-	span:after
-		transform: rotate(-45deg) translate(7px, -8px)
+//
+// Form button
+//
+.form__btn
+	@extend %link__shadow
+	border: 0
+	background: none
+	color: $plcholder-gray
+	transition: all .3s ease
+	&:hover
+		color: $dark-blue
