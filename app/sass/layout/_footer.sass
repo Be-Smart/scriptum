@@ -1,0 +1,27 @@
+footer
+	@extend %bg
+	@extend %margin-bottom
+	+clearfix
+
+.footer__container
+	padding: 35px 0
+	position: relative
+	+span(12)
+	margin: 0 span(1 wide)
+	+breakpoint($sm__brkpoint)
+		+span(10)
+		margin: 0 span(2 wide)
+
+.footer__col
+	+span(10 of 12)
+
+.footer__icon-wrap
+	display: inline-block
+	width: 17px
+	height: 17px
+	margin-right: 15px
+
+.footer__copy
+	font-size: em(14px)
+	color: $copy-gray
+	margin: 12px 0 0

@@ -39,9 +39,7 @@ function validate(f){
 		return true;
 	};
 
-
 }
-
 
 $('.form__btn').on('click', function(){
 	var $form = $('.form').find('form');
