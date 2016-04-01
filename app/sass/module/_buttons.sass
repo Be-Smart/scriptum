@@ -1,7 +1,7 @@
 //
 // Menu button
 //
-.header__navbar__toggle
+.navbar__toggle
 	background: url(../img/menu-bg.png) -88px
 	display: block
 	width: 64px
@@ -9,6 +9,11 @@
 	float: right
 	cursor: pointer
 	margin-bottom: 5px
+	position: fixed
+	top: 55px
+	right: 40px
+	z-index: 99
+	@extend %transition
 	+breakpoint($md__brkpoint)
 		background: url(../img/menu-bg.png)
 		width: 84px
@@ -37,7 +42,8 @@
 		backface-visibility: hidden
 		border-radius: 2px
 
-.header__navbar__toggle.on
+.navbar__toggle.on
+	right: 250px
 	span
 		background-color: transparent
 		&:before

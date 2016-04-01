@@ -1,15 +1,23 @@
-.header__navbar
+.navbar
 	float: right
-	text-align: center
+	@extend %align-center
+	+clearfix
 
-.header__nav
-	background: $light-gray
-	clear: both
-	display: none
+.nav
+	background: $dark-blue
+	width: 250px
+	padding: 35px 0
+	height: 100%
+	position: fixed
+	top: 0
+	right: -250px
+	z-index: 100
+	@extend %transition
+	overflow-y: auto
 
-.header__nav__link
+.nav__link
+	color: $white
 	display: block
-	padding: 10px
-	border-bottom: 1px solid $dark-blue
+	padding: 20px
 	&:hover
 		border-color: $gray
