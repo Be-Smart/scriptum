@@ -1,13 +1,16 @@
 //
 // Isotope plugin
 //
-$('.works__img-col').isotope({
-	itemSelector: '.works__img-wrap',
-	masonry: {
-		percentPosition: true,
-		columnWidth: '.grid-sizer',
-		gutter: 0
-	}
+$(window).load(function(){
+	var $container = $('.works__img-col');
+	$container.isotope({
+		itemSelector: '.works__img-wrap',
+		masonry: {
+			percentPosition: true,
+			columnWidth: '.grid-sizer',
+			gutter: 0
+		}
+	});
 });
 
 $('.works__link').on( 'click', function(el) {

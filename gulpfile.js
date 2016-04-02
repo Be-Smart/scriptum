@@ -14,7 +14,7 @@ var webpack     = require('webpack-stream');
 gulp.task('browser-sync', ['sass'], function() {
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: '../scriptum'
 		}
 	});
 });
@@ -23,7 +23,7 @@ gulp.task('browser-sync', ['sass'], function() {
 // Reload BrowserSync if html file has any changes
 //
 gulp.task('html', function () {
-	return gulp.src('app/*.html')
+	return gulp.src('*.html')
 		.pipe(browserSync.reload({stream:true}));
 });
 
@@ -61,7 +61,7 @@ gulp.task('js', function(){
 // Watch html, sass, js files for changes & recompile & reload BrowserSync
 //
 gulp.task('watch', function () {
-	gulp.watch('app/*.html', ['html']);
+	gulp.watch('*.html', ['html']);
 	gulp.watch('app/sass/**', ['sass']);
 	gulp.watch('app/js/**', ['js']);
 });
