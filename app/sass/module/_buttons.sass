@@ -2,7 +2,7 @@
 // Menu button
 //
 .navbar__toggle
-	background: url(../img/menu-bg.png) -88px
+	background: url(../img/menu-bg.png) no-repeat -88px
 	display: block
 	width: 64px
 	height: 92px
@@ -14,8 +14,8 @@
 	right: 40px
 	z-index: 99
 	@extend %transition
-	+breakpoint($md__brkpoint)
-		background: url(../img/menu-bg.png)
+	+breakpoint($sm__brkpoint)
+		background: url(../img/menu-bg.png) no-repeat
 		width: 84px
 		height: 118px
 	span

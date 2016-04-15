@@ -34,3 +34,19 @@
 
 .about__link
 	@extend %link__shadow
+
+//
+// About page
+//
+.photo
+	@extend %bg
+	@extend %margin-bottom
+	+clearfix
+
+	&__col
+		&:last-child
+			margin-top: -6px
+		+breakpoint($xs__brkpoint)
+			+span(7 inside no-gutters)
+			&:last-child
+				margin-top: 0

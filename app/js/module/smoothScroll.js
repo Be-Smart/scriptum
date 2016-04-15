@@ -5,4 +5,5 @@ $links.on('click', function(el) {
 	$('html, body').animate({
 		scrollTop: target.offset().top
 	}, 500);
+	return false;
 });

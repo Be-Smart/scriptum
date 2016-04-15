@@ -10,6 +10,34 @@
 		text-align: left
 
 //
+// About page
+//
+.header__hdln
+	font-size: em(60px)
+	color: $white
+	@extend %align-center
+	+breakpoint($sm__brkpoint)
+		font-size: em(72px)
+
+.about-page__hdln
+	@extend %hdln__shadow
+	@extend %align-center
+	+breakpoint($sm__brkpoint)
+		margin-top: 0
+	+breakpoint($md__brkpoint)
+		text-align: left
+
+.about-page__subtitle
+	@extend %align-center
+	width: span(12 of 14)
+	margin: 0 span(1 wide)
+	+breakpoint($sm__brkpoint)
+		width: 100%
+		margin: auto
+	+breakpoint($md__brkpoint)
+		text-align: left
+
+//
 // Works section
 //
 .works__hdln
