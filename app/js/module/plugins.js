@@ -28,3 +28,8 @@ $('.owl-carousel').owlCarousel({
 	items: 1,
 	loop: true
 });
+
+//
+// Photoswipe plugin for lightbox effect
+//
+$('.works__img-col').photoSwipe();
